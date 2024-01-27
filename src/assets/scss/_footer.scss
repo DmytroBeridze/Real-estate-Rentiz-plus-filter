@@ -1,0 +1,98 @@
+.footer {
+  background-color: #1a242f;
+  &__container {
+    // padding: 139px 0 108px;
+    padding-top: 139px;
+    padding-bottom: 108px;
+  }
+  &__navigation {
+    gap: clamp(1.875rem, -14.494rem + 26.19vw, 8.75rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr 1fr;
+      // grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      justify-items: center;
+
+      .fbl-1 {
+        grid-column-start: 1;
+        grid-column-end: -1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .footer__description {
+        width: auto;
+      }
+    }
+    @media (max-width: 500px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+  }
+  &__description {
+    width: 340px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+    color: var(--subtext-color);
+    @media (max-width: 700px) {
+      max-width: 300px;
+      text-align: center;
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 31px;
+    margin-top: 31px;
+    & svg {
+      opacity: 0.3;
+      // cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  &__block-header {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 126%;
+    letter-spacing: 0.26px;
+    text-transform: capitalize;
+  }
+  &__block-list {
+    list-style: none;
+  }
+  &__link {
+    text-decoration: none;
+    color: var(--subtext-color);
+    font-family: Work Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+  }
+  &__copyright {
+    padding: 40px 0;
+    color: var(--subtext-color);
+    border-top: 1px solid rgba(48, 58, 68, 1);
+  }
+  &__copyright-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__block {
+    // grid-row: 2/3;
+  }
+}
